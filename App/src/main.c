@@ -1,22 +1,26 @@
+
+/* Includes ------------------------------------------------------------------*/
 #include "stm32f10x_conf.h"
-
-
 #include "uart.h"
 #include "systick.h"
 #include <stdio.h>
-#include <string.h>
 #include "data_handle.h"
 #include "queue.h"
-
 #include "delay.h"
 
-
-void test_io(void);
-
-CycQueue *q = NULL;
+/* Private function prototypes -----------------------------------------------*/
+static void test_io(void);
 
 
+/* Global variables ---------------------------------------------------------*/
+CycQueue *q = NULL; 
 
+
+/**
+  * @brief  Main program
+  * @param  None
+  * @retval None
+  */
 int main(void)
 {
 
@@ -45,11 +49,12 @@ int main(void)
 }
 
 
-/*
- * test led
- *
- */
-void test_io(void)
+/**
+  * @brief  test io
+  * @param  None
+  * @retval None
+  */
+static void test_io(void)
 {
 
 	GPIO_InitTypeDef Gpio_InitStr;

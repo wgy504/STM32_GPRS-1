@@ -1,5 +1,7 @@
-#include "uart.h"
+
+/* Includes ------------------------------------------------------------------*/
 #include "stm32f10x_conf.h"
+#include "uart.h"
 #include <stdio.h>
 
 #ifdef __GNUC__
@@ -11,10 +13,11 @@
 #endif /* __GNUC__ */
 
 
-/*
- * uart2 & uart3 init
- *
- */ 
+/**
+  * @brief  uart2 init for 
+  * @param  None
+  * @retval None
+  */
 void uart2_init(void)
 {
 	GPIO_InitTypeDef GPIO_InitStructure;
@@ -60,7 +63,11 @@ void uart2_init(void)
 	USART_Cmd(USART2, ENABLE);
 }
 
-
+/**
+  * @brief  uart3 is used to print log
+  * @param  None
+  * @retval None
+  */
 void uart3_init(void)
 {
 	GPIO_InitTypeDef GPIO_InitStructure;
