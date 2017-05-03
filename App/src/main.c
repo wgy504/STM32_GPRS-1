@@ -7,6 +7,7 @@
 #include "data_handle.h"
 #include "queue.h"
 #include "delay.h"
+#include "rtc.h"
 
 /* Private function prototypes -----------------------------------------------*/
 static void test_io(void);
@@ -14,7 +15,7 @@ static void test_io(void);
 
 /* Global variables ---------------------------------------------------------*/
 CycQueue *q = NULL; 
-
+extern __IO uint32_t TimeDisplay;
 
 /**
   * @brief  Main program
@@ -36,6 +37,7 @@ int main(void)
 	delay_init(72);
 	uart2_init();
 	uart3_init();
+	rtc_init();
 
 	
 	while(1)
@@ -43,6 +45,15 @@ int main(void)
 		
 		frame_data_prase();
 //		delay_ms(1000);
+
+		/* If 1s has been elapsed */
+    if (TimeDisplay == 1)
+    {
+			printf("\n\r");
+      /* Display current time */
+      Time_Display(RTC_GetCounter());
+      TimeDisplay = 0;
+    }
 	}
 
 

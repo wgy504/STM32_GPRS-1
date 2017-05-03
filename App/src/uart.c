@@ -110,7 +110,6 @@ void uart3_init(void)
 	NVIC_Init(&NVIC_InitStructure);
 	
 	USART_ITConfig(USART3, USART_IT_RXNE, ENABLE);
-	USART_ITConfig(USART3,USART_IT_IDLE,ENABLE);
 	
 	USART_Cmd(USART3, ENABLE);
 }
