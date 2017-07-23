@@ -553,13 +553,13 @@ ARM Macro Assembler    Page 9
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
 ork --depend=.\objects\startup_stm32f10x_hd.d -o.\objects\startup_stm32f10x_hd.
-o -I.\RTE\Device\STM32F103ZE -I.\RTE\_stm32_gprs -ID:\fhc\softwares\Keil_v5\ARM
-\PACK\ARM\CMSIS\5.0.1\CMSIS\Include -ID:\fhc\softwares\Keil_v5\ARM\PACK\Keil\ST
-M32F1xx_DFP\2.1.0\Device\Include -ID:\fhc\softwares\Keil_v5\ARM\PACK\Keil\STM32
-F1xx_DFP\2.1.0\Device\StdPeriph_Driver\inc --predefine="__MICROLIB SETA 1" --pr
-edefine="__UVISION_VERSION SETA 523" --predefine="_RTE_ SETA 1" --predefine="ST
-M32F10X_HD SETA 1" --list=.\listings\startup_stm32f10x_hd.lst RTE\Device\STM32F
-103ZE\startup_stm32f10x_hd.s
+o -I.\RTE\Device\STM32F103ZE -I.\RTE\_stm32_gprs -ID:\Software\Keil_v5\ARM\PACK
+\ARM\CMSIS\5.0.1\CMSIS\Include -ID:\Software\Keil_v5\ARM\PACK\Keil\STM32F1xx_DF
+P\2.1.0\Device\Include -ID:\Software\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\
+Device\StdPeriph_Driver\inc --predefine="__MICROLIB SETA 1" --predefine="__UVIS
+ION_VERSION SETA 523" --predefine="_RTE_ SETA 1" --predefine="STM32F10X_HD SETA
+ 1" --list=.\listings\startup_stm32f10x_hd.lst RTE\Device\STM32F103ZE\startup_s
+tm32f10x_hd.s
 
 
 
