@@ -47,7 +47,6 @@ uint8_t CycQueueIn(CycQueue *q, uint8_t data)
 {
 	if(q->count == MAXSIZE)
 	{
-		//Serial.printf("The queue is full!\n");
 		return 0;
 	}
 	else
@@ -65,7 +64,6 @@ uint8_t CycQueueOut(CycQueue *q)
 {
 	if(q->count == 0)
 	{
-		//Serial.printf("The queue is empty!\n");
 		return 0;
 	}
 	else
@@ -88,7 +86,6 @@ uint8_t CycQueuePeek(CycQueue *q)
 {
 	if(q->count == 0)
 	{
-		//Serial.printf("The queue is empty!\n");
 		return 0;
 	}
 	else
