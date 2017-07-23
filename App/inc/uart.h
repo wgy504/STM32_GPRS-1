@@ -27,7 +27,7 @@
 // 协议帧固定部分长度
 #define PROTOCOL_FIXED_LENGTH    6
 
-void uart2_init(void);
+void uart1_init(void);
 void uart3_init(void);
 void data_upload(uint8_t endpoint, uint8_t *data, uint8_t len);
 uint8_t get_check_sum(uint8_t *pack, uint8_t pack_len);
