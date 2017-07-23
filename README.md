@@ -17,6 +17,7 @@
 
 ## 2. Demo
 
+```
 /**
   * @brief  This demo describes how to set GPIO to output.
   * @param  None
@@ -43,7 +44,8 @@ static void set_gpio_output(void)
 	//GPIO_SetBits(GPIOC,GPIO_Pin_2 | GPIO_Pin_3 | GPIO_Pin_4 | GPIO_Pin_5);
 
 }
-
+```
+```
 /**
   * @brief  This demo describes how to read GPIO status.
   * @param  None
@@ -67,8 +69,8 @@ static void read_gpio_status(void)
 	
 	GPIO_ReadOutputDataBit(GPIOA,GPIO_Pin_5);
 }
-
-
+```
+```
 /**
   * @brief  This demo describes how to configure GPIO interrupt.
   *         The interrupt handle function in the " stm32f10x_it.c ".
@@ -103,7 +105,8 @@ static void gpio_interrupt_configure(void)
     NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
     NVIC_Init(&NVIC_InitStructure);
 }
-
+```
+```
 /**
   * @brief  This function handles External line 2 interrupt request.
   * @param  None
@@ -118,5 +121,5 @@ void EXTI2_IRQHandler(void)
     EXTI_ClearITPendingBit(EXTI_Line2);
   }
 }
-
+```
 
